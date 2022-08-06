@@ -1,3 +1,5 @@
 *.out
 codefile_32
 codefile_64
+codefile_32_dump
+codefile_64_dump
