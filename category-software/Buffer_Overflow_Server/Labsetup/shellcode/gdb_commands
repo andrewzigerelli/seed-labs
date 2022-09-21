@@ -1,0 +1,9 @@
+b call_shellcode.c:23
+set logging file tmp.txt
+set logging on
+r
+si
+si
+si
+si
+si

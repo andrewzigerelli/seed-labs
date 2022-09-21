@@ -1,0 +1,17 @@
+
+mysh_64:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	48 31 d2             	xor    rdx,rdx
+   3:	48 31 f6             	xor    rsi,rsi
+   6:	56                   	push   rsi
+   7:	48 bb 2f 62 69 6e 2f 	movabs rbx,0x68732f2f6e69622f
+   e:	2f 73 68 
+  11:	53                   	push   rbx
+  12:	54                   	push   rsp
+  13:	5f                   	pop    rdi
+  14:	b0 3b                	mov    al,0x3b
+  16:	0f 05                	syscall 

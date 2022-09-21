@@ -1,0 +1,2 @@
+Undefined command: "exit".  Try "help".
+Undefined command: "quiot".  Try "help".

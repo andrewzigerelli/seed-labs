@@ -1,5 +1,5 @@
 FLAGS    = -z execstack -fno-stack-protector
-FLAGS_32 = -static -m32
+FLAGS_32 = -static 
 TARGET   = server stack-L1 stack-L2 stack-L3 stack-L4
  
 L1 = 100
@@ -31,3 +31,5 @@ install:
 	cp server ../bof-containers
 	cp stack-* ../bof-containers
 
+stack-debug:
+	gcc -g -DBUF_SIZE=$(L1) -DSHOW_FP $(FLAGS) $(FLAGS_32) -o $@ stack.c

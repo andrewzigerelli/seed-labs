@@ -1,6 +1,7 @@
 section .text
   global _start
     _start:
+      ; The following code calls execve("/bin/sh", ...)
       xor  rdx, rdx       ; 3rd argument
       push rdx
       mov rax,'/bin//sh'

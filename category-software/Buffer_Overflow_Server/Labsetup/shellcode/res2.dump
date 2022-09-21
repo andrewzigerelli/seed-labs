@@ -1,0 +1,63 @@
+
+res2.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	eb 36                	jmp    0x38
+   2:	5b                   	pop    rbx
+   3:	48 31 c0             	xor    rax,rax
+   6:	88 43 09             	mov    BYTE PTR [rbx+0x9],al
+   9:	88 43 0c             	mov    BYTE PTR [rbx+0xc],al
+   c:	88 43 47             	mov    BYTE PTR [rbx+0x47],al
+   f:	48 89 5b 48          	mov    QWORD PTR [rbx+0x48],rbx
+  13:	48 8d 4b 0a          	lea    rcx,[rbx+0xa]
+  17:	48 89 4b 50          	mov    QWORD PTR [rbx+0x50],rcx
+  1b:	48 8d 4b 0d          	lea    rcx,[rbx+0xd]
+  1f:	48 89 4b 58          	mov    QWORD PTR [rbx+0x58],rcx
+  23:	48 89 43 60          	mov    QWORD PTR [rbx+0x60],rax
+  27:	48 89 df             	mov    rdi,rbx
+  2a:	48 8d 73 48          	lea    rsi,[rbx+0x48]
+  2e:	48 31 d2             	xor    rdx,rdx
+  31:	48 31 c0             	xor    rax,rax
+  34:	b0 3b                	mov    al,0x3b
+  36:	0f 05                	syscall 
+  38:	e8 c5 ff ff ff       	call   0x2
+  3d:	2f                   	(bad)  
+  3e:	62                   	(bad)  
+  3f:	69 6e 2f 62 61 73 68 	imul   ebp,DWORD PTR [rsi+0x2f],0x68736162
+  46:	00 2d 63 00 2f 62    	add    BYTE PTR [rip+0x622f0063],ch        # 0x622f00af
+  4c:	69 6e 2f 6c 73 20 2d 	imul   ebp,DWORD PTR [rsi+0x2f],0x2d20736c
+  53:	6c                   	ins    BYTE PTR es:[rdi],dx
+  54:	3b 20                	cmp    esp,DWORD PTR [rax]
+  56:	65 63 68 6f          	movsxd ebp,DWORD PTR gs:[rax+0x6f]
+  5a:	20 48 65             	and    BYTE PTR [rax+0x65],cl
+  5d:	6c                   	ins    BYTE PTR es:[rdi],dx
+  5e:	6c                   	ins    BYTE PTR es:[rdi],dx
+  5f:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  60:	20 36                	and    BYTE PTR [rsi],dh
+  62:	34 3b                	xor    al,0x3b
+  64:	20 2f                	and    BYTE PTR [rdi],ch
+  66:	62                   	(bad)  
+  67:	69 6e 2f 74 61 69 6c 	imul   ebp,DWORD PTR [rsi+0x2f],0x6c696174
+  6e:	20 2d 6e 20 34 20    	and    BYTE PTR [rip+0x2034206e],ch        # 0x203420e2
+  74:	2f                   	(bad)  
+  75:	65 74 63             	gs je  0xdb
+  78:	2f                   	(bad)  
+  79:	70 61                	jo     0xdc
+  7b:	73 73                	jae    0xf0
+  7d:	77 64                	ja     0xe3
+  7f:	20 20                	and    BYTE PTR [rax],ah
+  81:	20 20                	and    BYTE PTR [rax],ah
+  83:	20 00                	and    BYTE PTR [rax],al
+  85:	8d                   	(bad)  
+  86:	d9 ff                	fcos   
+  88:	ff                   	(bad)  
+  89:	ff                   	(bad)  
+  8a:	7f 00                	jg     0x8c
+  8c:	00 97 d9 ff ff ff    	add    BYTE PTR [rdi-0x27],dl
+  92:	7f 00                	jg     0x94
+  94:	00 9a d9 ff ff ff    	add    BYTE PTR [rdx-0x27],bl
+  9a:	7f 00                	jg     0x9c
+	...

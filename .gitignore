@@ -14,5 +14,5 @@
 *.swp
 !**/Figs/*.pdf
 *.o
-
-
+*__pycache__
+*.gdb_history*
