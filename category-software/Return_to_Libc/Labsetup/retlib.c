@@ -12,7 +12,7 @@ int bof(char *str)
     unsigned int *framep;
 
     // Copy ebp into framep
-    asm("movl %%ebp, %0" : "=r" (framep));      
+    asm("mov %%rbp, %0" : "=r" (framep));      
 
     /* print out information for experiment purpose */
     printf("Address of buffer[] inside bof():  0x%.8x\n", (unsigned)buffer);
