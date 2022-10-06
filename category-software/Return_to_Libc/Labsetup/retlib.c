@@ -1,5 +1,6 @@
-#include <stdlib.h>
+#include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #ifndef BUF_SIZE
@@ -9,14 +10,14 @@
 int bof(char *str)
 {
     char buffer[BUF_SIZE];
-    unsigned int *framep;
+    uint64_t *framep;
 
     // Copy ebp into framep
     asm("mov %%rbp, %0" : "=r" (framep));      
 
     /* print out information for experiment purpose */
-    printf("Address of buffer[] inside bof():  0x%.8x\n", (unsigned)buffer);
-    printf("Frame Pointer value inside bof():  0x%.8x\n", (unsigned)framep);
+    printf("Address of buffer[] inside bof():  %p\n", (uint64_t *)buffer);
+    printf("Frame Pointer value inside bof():  %p\n", framep);
 
     strcpy(buffer, str);   
 
@@ -36,7 +37,7 @@ int main(int argc, char **argv)
 
    badfile = fopen("badfile", "r");
    int length = fread(input, sizeof(char), 1000, badfile);
-   printf("Address of input[] inside main():  0x%x\n", (unsigned int) input);
+   printf("Address of input[] inside main():  %p\n", (uint64_t *) input);
    printf("Input size: %d\n", length);
 
    bof(input);
